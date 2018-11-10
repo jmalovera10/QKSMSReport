@@ -1,0 +1,12 @@
+/*----------------------
+Dashboard Navbar Styles
+ ----------------------*/
+
+
+.brand{
+    cursor: pointer;
+}
+
+.brand:hover{
+    cursor: pointer; !important;
+}
