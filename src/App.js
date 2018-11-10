@@ -1,28 +1,47 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import DashboardNavbar from './navbar/DashboardNavbar';
+
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            position : "home"
+        };
+
+        this.goToHome = this.goToHome.bind(this);
+        this.goToEvConn = this.goToEvConn.bind(this);
+        this.goToPerformance = this.goToPerformance.bind(this);
+        this.goToSecurity = this.goToSecurity.bind(this);
+    }
+
+    goToHome(){
+        this.setState({position : "home"});
+    }
+
+    goToEvConn(){
+        this.setState({position : "ev-conn"});
+    }
+
+    goToPerformance(){
+        this.setState({position : "performance"});
+    }
+
+    goToSecurity(){
+        this.setState({position : "security"});
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn}
+                                 goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}/>
+            </div>
+        );
+    }
 }
 
 export default App;
