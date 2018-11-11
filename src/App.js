@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 import DashboardNavbar from './navbar/DashboardNavbar';
+import Home from "./home/Home";
+import EventualConnectivity from "./ev-conn/EventualConnectivity";
+import Performance from "./performance/Performance";
+import Security from "./security/Security";
+
 
 import './App.css';
 
@@ -39,6 +44,17 @@ class App extends Component {
             <div className="App">
                 <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn}
                                  goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}/>
+                {
+                    this.state === "home"?
+                        <Home/>
+                        :this.state === "ev-conn"?
+                        <EventualConnectivity/>
+                        :this.state === "performance"?
+                            <Performance/>
+                            :this.state === "security"?
+                                <Security/>
+                                :null
+                }
             </div>
         );
     }

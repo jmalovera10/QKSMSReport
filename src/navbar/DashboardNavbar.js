@@ -13,7 +13,7 @@ export default class DashboardNavbar extends Component {
                             Telegram Analysis
                         </div>
                         <div>
-                            <Glyphicon glyph="send"/>
+                            <Glyphicon glyph="envelope"/>
                         </div>
                     </Navbar.Brand>
                 </Navbar.Header>
