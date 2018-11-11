@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import DashboardNavbar from './navbar/DashboardNavbar';
+import {Jumbotron} from "reactstrap";
 import Home from "./home/Home";
 import EventualConnectivity from "./ev-conn/EventualConnectivity";
 import Performance from "./performance/Performance";
@@ -10,11 +11,11 @@ import './App.css';
 
 class App extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
-            position : "home"
+            position: "home"
         };
 
         this.goToHome = this.goToHome.bind(this);
@@ -23,20 +24,20 @@ class App extends Component {
         this.goToSecurity = this.goToSecurity.bind(this);
     }
 
-    goToHome(){
-        this.setState({position : "home"});
+    goToHome() {
+        this.setState({position: "home"});
     }
 
-    goToEvConn(){
-        this.setState({position : "ev-conn"});
+    goToEvConn() {
+        this.setState({position: "ev-conn"});
     }
 
-    goToPerformance(){
-        this.setState({position : "performance"});
+    goToPerformance() {
+        this.setState({position: "performance"});
     }
 
-    goToSecurity(){
-        this.setState({position : "security"});
+    goToSecurity() {
+        this.setState({position: "security"});
     }
 
     render() {
@@ -45,15 +46,15 @@ class App extends Component {
                 <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn}
                                  goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}/>
                 {
-                    this.state.position === "home"?
+                    this.state.position === "home" ?
                         <Home/>
-                        :this.state.position === "ev-conn"?
+                        : this.state.position === "ev-conn" ?
                         <EventualConnectivity/>
-                        :this.state.position === "performance"?
+                        : this.state.position === "performance" ?
                             <Performance/>
-                            :this.state.position === "security"?
+                            : this.state.position === "security" ?
                                 <Security/>
-                                :null
+                                : null
                 }
             </div>
         );

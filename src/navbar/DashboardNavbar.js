@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Navbar, Nav, NavItem, Glyphicon} from "react-bootstrap";
+import {Navbar, Nav, NavItem, Glyphicon} from "react-bootstrap"
 
 export default class DashboardNavbar extends Component {
 
