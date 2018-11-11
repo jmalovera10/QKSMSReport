@@ -45,13 +45,13 @@ class App extends Component {
                 <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn}
                                  goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}/>
                 {
-                    this.state === "home"?
+                    this.state.position === "home"?
                         <Home/>
-                        :this.state === "ev-conn"?
+                        :this.state.position === "ev-conn"?
                         <EventualConnectivity/>
-                        :this.state === "performance"?
+                        :this.state.position === "performance"?
                             <Performance/>
-                            :this.state === "security"?
+                            :this.state.position === "security"?
                                 <Security/>
                                 :null
                 }

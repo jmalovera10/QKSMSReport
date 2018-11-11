@@ -10,9 +10,9 @@ export default class DashboardNavbar extends Component {
                 <Navbar.Header>
                     <Navbar.Brand onClick={this.props.goToHome}>
                         <div className="brand">
-                            Telegram Analysis
+                            QKSMS Analysis
                         </div>
-                        <div>
+                        <div className="brand-logo">
                             <Glyphicon glyph="envelope"/>
                         </div>
                     </Navbar.Brand>

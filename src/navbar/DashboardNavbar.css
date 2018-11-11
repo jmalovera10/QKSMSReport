@@ -10,3 +10,7 @@ Dashboard Navbar Styles
 .brand:hover{
     cursor: pointer; !important;
 }
+
+.brand-logo{
+    margin-top: 20px;
+}
