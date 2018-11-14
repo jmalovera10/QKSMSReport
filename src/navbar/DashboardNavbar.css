@@ -8,9 +8,16 @@ Dashboard Navbar Styles
 }
 
 .brand:hover{
-    cursor: pointer; !important;
+    cursor: pointer !important;
 }
 
-.brand-logo{
-    margin-top: 20px;
+
+.brand-logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+navbar{
+    height: fit-content;
 }

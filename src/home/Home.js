@@ -49,7 +49,7 @@ export default class Home extends Component {
             <Row>
                 <ContributorStats contributors={this.state.contribStats} isCSLoaded={this.state.isCSLoaded}/>
                 <CardReport title="Exceptions are usually avoided on the code but not handled!"
-                            imageUrl =""
+                            imageUrl ="qksmsLogo.png"
                             analysis="The code for loading a multimedia message shows that exceptions are being avoided but not handled.
                             Sometimes, 'try' is used and then directly a finally to end the procedure without using a catch. Other times the catch is used
                              directly to return a specific value without even printing the exception or noting on the code.
