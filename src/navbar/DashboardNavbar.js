@@ -18,6 +18,12 @@ export default class DashboardNavbar extends Component {
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Nav pullRight>
+                    <NavItem eventKey={0} onClick={this.props.goToUsability}>
+                        <Glyphicon glyph="heart" bsClass="glyphicon"/>
+                        <div>
+                            Usability
+                        </div>
+                    </NavItem>
                     <NavItem eventKey={1} onClick={this.props.goToEvConn}>
                         <Glyphicon glyph="globe" bsClass="glyphicon"/>
                         <div>

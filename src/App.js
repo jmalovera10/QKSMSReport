@@ -8,6 +8,7 @@ import Security from "./security/Security";
 
 
 import './App.css';
+import Usability from "./usability/Usability";
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
         this.goToEvConn = this.goToEvConn.bind(this);
         this.goToPerformance = this.goToPerformance.bind(this);
         this.goToSecurity = this.goToSecurity.bind(this);
+        this.goToUsability = this.goToUsability.bind(this);
     }
 
     goToHome() {
@@ -39,12 +41,17 @@ class App extends Component {
     goToSecurity() {
         this.setState({position: "security"});
     }
+    goToUsability() {
+        this.setState({position: "usability"});
+    }
 
     render() {
         return (
             <div className="App">
                 <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn}
-                                 goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}/>
+                                 goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}
+                                goToUsability={this.goToUsability}
+                />
                 {
                     this.state.position === "home" ?
                         <Home/>
@@ -54,7 +61,9 @@ class App extends Component {
                             <Performance/>
                             : this.state.position === "security" ?
                                 <Security/>
-                                : null
+                                : this.state.position === "usability" ?
+                                    <Usability/>
+                                    : null
                 }
             </div>
         );
