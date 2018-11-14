@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
 import "./EventualConnectivity.css"
 import CardReport from "./CardReport";
-import {Row} from 'reactstrap';
+import {Row,Col} from 'reactstrap';
 
 export default class EventualConnectivity extends Component {
 
     render() {
         return (
             <Row>
-
-                <CardReport title="Error loading image on airplane mode."
-                            imageUrl="screenshots/errorLoadingImage.PNG"
-                            analysis="Sometimes: On airplane mode, on a conversation, trying to append a picture creates and error (even though no exception is launched) but the picture is not appended and the app reverts to the choose a recipient activity.
-Other times, the picture is appended to the message but when clicking send, nothing is sent and the message no longer appears. When the connection is good, the image is sent with no problem. Inspecting the code we notice that the loader function for multimedia objects avoids exceptions but does not handle them.
-When catching the exceptions this was te result on a picture that was kept as sending (this time it worked)."
+                <Col md="3"></Col>
+                <CardReport title="Eventual connectivity is for the most part well handled."
+                            imageUrl="/screenshots/notificationEC.PNG"
+                            analysis="Eventual connectivity is actually well handled. When everything needed is enabled, messages that cannot be sent are kept as “sending” and messages that failed in the sending process generate a notification that is shown to the user and prompts him to retry.
+When messages are scheduled and there is no network when the message is supposed to be sent, the same notification is launched.
+The only missing thing is that the app does not alert the user that any of these fails are because of a network error. It could be useful to give him a hint (using a snack bar or changing the notification or the message of message not sent) so that he can check his connection.
+As it is done when trying to make a call, that the app realises that airplane mode is on and prompts to turn it off.
+"
                 />
+                <Col md="3"></Col>
 
-                <CardReport title="Opening message thread."
-                            imageUrl="screenshots/errorOnOpeningThread.PNG"
-                            analysis="On opening message thread with airplane mode on."
-                />
             </Row>
         );
     }

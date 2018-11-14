@@ -17,10 +17,10 @@ export default class CardReport extends Component {
     render() {
 
         return (
-            <Col sm="6">
+            <Col sm="12" md ="6">
                 <Card className="contrib-card-report">
                     <h1>{this.props.title}</h1>
-                    <Image src={this.props.imageUrl} rounded={true} responsive={true}/>
+                    <Image className="image" src={this.props.imageUrl} rounded={true} responsive={true}/>
                     <p>{this.props.analysis}</p>
                 </Card>
             </Col>
