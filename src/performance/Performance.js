@@ -11,6 +11,7 @@ export default class Performance extends Component {
                 <Row>
                     <CardReport title="MainActivity Memory Profiling"
                                 imageUrl1="/screenshots/mainActivity.jpeg"
+                                useVideoIn1={false}
                                 analysis="We first made memory profiling on the application, starting with the MainActivity.
                                  We found that it has strong relationships with UI components, which doubles the memory
                                  consumption when the app is under rotation stress. From the heap dumps it can be seen that
@@ -25,6 +26,7 @@ export default class Performance extends Component {
                     />
                     <CardReport title="ComposeActivity Memory Profiling"
                                 imageUrl1="/screenshots/ComposeActivity.jpeg"
+                                useVideoIn1={false}
                                 analysis="Also, when rotating the phone repeatedly in the ComposeActivity, the memory again
                                 increases uncontrollably. This happens because of the same strong relations maintained with
                                 the activity within the RecyclerView. To address this issue, the RecyclerView may use a weak
@@ -37,6 +39,7 @@ export default class Performance extends Component {
 
                     <CardReport title="Application Graphic Management"
                                 imageUrl1="/screenshots/GraphicManipulationGlide.png"
+                                useVideoIn1={false}
                                 analysis="On the other hand, the graphics memory curves during interaction with the app,
                                 remain constant over time. This is because the application uses the Glide library to manage
                                 bitmaps and other graphic resources. For example, in the MainActivity when scrolling down
@@ -45,6 +48,17 @@ export default class Performance extends Component {
                                 secondImage={false}
                                 isGoodPractice={true}
                     />
+
+                    <CardReport title="Application CPU Use"
+                                imageUrl1=""
+                                useVideoIn1={true}
+                                analysis="When evaluating CPU performance of the app, we found that in the ComposeActivity
+                                the resources are consumed in repainting (repainting is indicated in the video by purple
+                                frames). Nevertheless, in the MainActivity the repaintings only occur due to UI scrolling
+                                or user input, which means that it has optimized CPU usage."
+                                secondImage={false}
+                                imageUrl2=""
+                                isGoodPractice={true}/>
                 </Row>
             </div>
         );
