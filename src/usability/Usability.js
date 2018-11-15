@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./Usability.css"
 import CardReport from "../CardReport";
-import {Row, Col} from 'reactstrap';
+import {Row} from 'reactstrap';
 import CardReportUsability from "./CardReportUsability";
 
 // App component - represents the whole app

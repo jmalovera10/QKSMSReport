@@ -1,7 +1,7 @@
 import "./CardReportUsability.css"
 import React, {Component} from 'react';
 import {Image} from "react-bootstrap";
-import {Card,Col, Row} from 'reactstrap';
+import {Card,Col} from 'reactstrap';
 
 
 // App component - represents the whole app
@@ -12,7 +12,6 @@ export default class CardReportUsability extends Component {
         super(props);
 
     }
-
 
     render() {
 
