@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7ed49a1-6959-4c38-8374-5b39c4daff78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/screenshots/mainActivity.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/screenshots/mainActivity.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/performance/Performance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/performance/Performance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/usability/CardReportUsability.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/usability/CardReportUsability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/usability/Usability.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/usability/Usability.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Performance.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Performance.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/performance/Performance.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="717">
               <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -88,32 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Usability.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/usability/Usability.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="80" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="80" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardReportUsability.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/usability/CardReportUsability.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardReportPerformance.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CardReportPerformance.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -124,8 +98,8 @@
       <file leaf-file-name="CardReportPerformance.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="445">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -190,10 +164,10 @@
         <option value="$PROJECT_DIR$/src/navbar/DashboardNavbar.js" />
         <option value="$PROJECT_DIR$/src/navbar/DashboardNavbar.css" />
         <option value="$PROJECT_DIR$/src/usability/CardReportUsability.js" />
-        <option value="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css" />
         <option value="$PROJECT_DIR$/src/usability/Usability.js" />
-        <option value="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js" />
         <option value="$PROJECT_DIR$/src/performance/Performance.js" />
+        <option value="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css" />
+        <option value="$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js" />
       </list>
     </option>
   </component>
@@ -332,7 +306,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28862000" />
+    <option name="totallyTimeSpent" value="30331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -693,6 +667,13 @@
     <entry file="file://$PROJECT_DIR$/src/usability/Usability.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/usability/CardReportUsability.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/usability/Usability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -703,34 +684,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css">
+    <entry file="file://$PROJECT_DIR$/src/performance/Performance.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/usability/CardReportUsability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="717">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/performance/Performance.js">
+    <entry file="file://$PROJECT_DIR$/src/performance/modules/CardReportPerformance.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+        <state relative-caret-position="445">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/performance/modules/CardReportPerformance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
