@@ -16,6 +16,22 @@
     margin-right: auto;
 }
 
+.glyphicon-good-practice{
+    font-size: 50px;
+    color: chartreuse;
+}
+
+.glyphicon-bad-practice{
+    font-size: 50px;
+    color: crimson;
+}
+
+.center-items{
+    margin: auto;
+    position: center;
+    text-align: center;
+}
+
 p{
     text-align: justify;
     text-justify: inter-word;
