@@ -17,6 +17,7 @@ When messages are scheduled and there is no network when the message is supposed
 The only missing thing is that the app does not alert the user that any of these fails are because of a network error. It could be useful to give him a hint (using a snack bar or changing the notification or the message of message not sent) so that he can check his connection.
 As it is done when trying to make a call, that the app realises that airplane mode is on and prompts to turn it off.
 "
+                                level = {1}
                     />
                     <Col md="3"></Col>
 

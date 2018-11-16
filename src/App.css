@@ -30,3 +30,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.bg-warning{
+  background-color: orange;
+}
+.bg-danger{
+  background-color: red;
+}
+.bg-success{
+  background-color: green;
+}

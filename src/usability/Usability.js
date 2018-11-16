@@ -23,10 +23,12 @@ export default class Usability extends Component {
                              2. The app does not ask for the permission when clicking 'Adjuntar una foto' but only on 'Tomar una foto'.
                              3. When the exception is launched instead of ignoring it the app should prompt the user for the permissions needed.
                              We recommend adding these permissions requests at these 3 steps."
+                                level={3}
                     />
                     <CardReportUsability title="It still won't work if it is not the default app for sms."
                                          imageUrl1="/screenshots/defaultAppError.PNG"
                                          imageUrl2="/screenshots/defaultMessage.png"
+                                         level={3}
                                          analysis="After allowing file access through the 'Tomar una foto' functionality, te app still wont send images and won't notify the user WHY.
                                          After trying different things we realized that the app won't send images if it is not the default sms app!
                                          If this cannot be fixed, we recommend prompting the user to make the app the default app every time he wants to send a picture,
@@ -37,6 +39,7 @@ export default class Usability extends Component {
                     <CardReportUsability title="Visually clean and attractive interface."
                                          imageUrl1="/screenshots/SendMessage.jpeg"
                                          imageUrl2="/screenshots/mainActivity.jpeg"
+                                         level={1}
                                          analysis="Aside from these problems, the app presents a visually clean and attractive interface where the primary color for buttons is customizable with a wide range of options.
                                          Almost every functionality can be found easily.
                                          On the contrary, there is no accent color used which makes it difficult to notice important things like the ones just presented and unread messages could be more noticeable..
@@ -45,6 +48,7 @@ export default class Usability extends Component {
                     <CardReport
                         title="Menu seems to be redundant and is certainly not attractive."
                         imageUrl="/screenshots/MenuBar.jpeg"
+                        level={1}
                         analysis="The menu that can be access seems to show almost the same functionalities and does not attract the user to explore any further.
                         When first seen it seems like the developers used a default template and felts the need to fill this with information.
                         It could be focused to the key functionalities that can't be accessed otherwise and users will really use and could use colors or something to interest the user."

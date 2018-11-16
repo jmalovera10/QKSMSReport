@@ -56,6 +56,7 @@ export default class Home extends Component {
                              This makes debugging really difficult.
                              For a lot of cases we enabled the exception printing and found out some improving measures that could be
                              taken after analysing them. The most interesting ones can be found at the usability tab."
+                level = {2}
                 />
             </Row>
         );
