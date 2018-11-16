@@ -41,6 +41,7 @@ export default class CardReportUsability extends Component {
                     <Image className="image1" src={this.props.imageUrl1} rounded={true} responsive={true}/>
                     <p>{this.props.analysis}</p>
                     <Image className="image2" src={this.props.imageUrl2} rounded={true} responsive={true}/>
+                    <p><strong>Recommendation: </strong>{this.props.recommendation}</p>
                 </Card>
             </Col>
         );

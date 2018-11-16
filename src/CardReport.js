@@ -41,6 +41,7 @@ export default class CardReport extends Component {
                     <h1>{this.props.title}</h1>
                     <Image className="image" src={this.props.imageUrl} rounded={true} responsive={true}/>
                     <p>{this.props.analysis}</p>
+                    <p><strong>Recommendation: </strong>{this.props.recommendation}</p>
                 </Card>
             </Col>
         );
