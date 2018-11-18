@@ -33,7 +33,7 @@ export default class Usability extends Component {
                                          fixImageUrl={"/screenshots/fixDefaultRequest.PNG"}
                                          analysis="After allowing file access through the 'Tomar una foto' functionality, te app still wont send images and won't notify the user WHY.
                                          After trying different things we realized that the app won't send images if it is not the default sms app!
-
+                                         Apparently for some users no message will be sent if it is not made the default app. But in my case is just images, and there is no way for knowing it!
                                          Right now the only way for the user to solve this is to figure it out (how?) and go back to the main activity to set the app as the default app.
                                          It is important to notice that the message shown is not only not noticeable but is also confusing and does not inform the user about why should he make it the default sms app.
                                          Apparently making the app default can also solve the above problem (at least in android 8.0), we recommend solving both in case this changes or doesn't work in other versions.

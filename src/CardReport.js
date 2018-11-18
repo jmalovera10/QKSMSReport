@@ -33,7 +33,7 @@ export default class CardReport extends Component {
                 <Card className="contrib-card-report">
                     <Progress color={style} value={level} >{priority}</Progress>
                     <h1>{this.props.title}</h1>
-                    <Image className="image" src={this.props.imageUrl} rounded={true} responsive={true}/>
+                    {this.props.imageUrl?<Image className="image" src={this.props.imageUrl} rounded={true} responsive={true}/>:<div></div>}
                     <p>{this.props.analysis}</p>
                     {this.props.imageUrl2?<Image className="image2" src={this.props.imageUrl2} rounded={true} responsive={true}/>:<div></div>}
                     <p><strong>Recommendation: </strong>{this.props.recommendation}</p>
