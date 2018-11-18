@@ -1,18 +1,12 @@
 import "./CardReport.css"
 import React, {Component} from 'react';
 import {Image} from "react-bootstrap";
-import {Card,Col, Progress} from 'reactstrap';
+import {Card, Col, Progress} from 'reactstrap';
 
 
 // App component - represents the whole app
 
 export default class CardReport extends Component {
-
-    constructor(props) {
-        super(props);
-
-    }
-
 
     render() {
         let style = "success";
@@ -26,7 +20,7 @@ export default class CardReport extends Component {
                 break;
             case 3:
                 style = "danger";
-                level =90;
+                level =100;
                 priority = "priority high";
                 break;
             default:
@@ -41,7 +35,14 @@ export default class CardReport extends Component {
                     <h1>{this.props.title}</h1>
                     <Image className="image" src={this.props.imageUrl} rounded={true} responsive={true}/>
                     <p>{this.props.analysis}</p>
+                    {this.props.imageUrl2?<Image className="image2" src={this.props.imageUrl2} rounded={true} responsive={true}/>:<div></div>}
                     <p><strong>Recommendation: </strong>{this.props.recommendation}</p>
+                    {this.props.fixImageUrl?
+                        <div>
+                            <strong>Possible fix: </strong>
+                            <Image className="imageFix" src={this.props.fixImageUrl} rounded={true} responsive={true}/>
+                        </div>:<div></div>
+                    }
                 </Card>
             </Col>
         );

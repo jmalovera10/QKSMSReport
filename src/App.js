@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import DashboardNavbar from './navbar/DashboardNavbar';
-import {Jumbotron} from "reactstrap";
 import Home from "./home/Home";
 import EventualConnectivity from "./ev-conn/EventualConnectivity";
 import Performance from "./performance/Performance";

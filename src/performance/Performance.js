@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import CardReport from "./modules/CardReportPerformance";
 import {Row} from 'reactstrap';
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import "./DashboardNavbar.css"
-import {Navbar, Nav, NavItem, Glyphicon, Row, Col} from "react-bootstrap"
+import {Glyphicon, Nav, Navbar, NavItem} from "react-bootstrap"
 
 export default class DashboardNavbar extends Component {
 
@@ -11,7 +11,7 @@ export default class DashboardNavbar extends Component {
                 <Navbar.Header>
                     <Navbar.Brand onClick={this.props.goToHome}>
                         <div className="brand-logo">
-                            <img src="qksmsLogo.png"/>
+                            <img src="qksmsLogo.png" alt=""/>
                         </div>
                         <div className="brand">
                             QKSMS Analysis

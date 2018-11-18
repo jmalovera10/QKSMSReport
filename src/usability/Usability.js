@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import "./Usability.css"
 import CardReport from "../CardReport";
 import {Row} from 'reactstrap';
-import CardReportUsability from "./CardReportUsability";
 
 // App component - represents the whole app
 
@@ -14,8 +13,8 @@ export default class Usability extends Component {
         return (
             <div className="usability">
                 <Row>
-                    <CardReportUsability title="Sending a picture does not ask for files permissions."
-                                         imageUrl1="/screenshots/blancImage.jpeg"
+                    <CardReport          title="Sending a picture does not ask for files permissions."
+                                         imageUrl="/screenshots/blancImage.jpeg"
                                          imageUrl2="/screenshots/ExceptionsRequestPermissions.PNG"
                                          analysis="While trying to send a picture we noticed that the picture was appended blanc o the message and when sending it it just disappeared without notifying anything.
                              After enabling exceptions programmatically. We realized it was a security exception that was thrown but the app never realized it.
@@ -23,23 +22,27 @@ export default class Usability extends Component {
                              2. The app does not ask for the permission when clicking 'Adjuntar una foto' but only on 'Tomar una foto'.
                              3. When the exception is launched instead of ignoring it the app should prompt the user for the permissions needed.
                              "
-                                recommendation="We recommend adding these permissions requests at these 3 steps."
+                                         fixImageUrl={"/screenshots/simplefixMediaFileRequest.PNG"}
+                                recommendation="We recommend adding these permissions requests at these 3 steps. Or to make it simpler just add it as shown in the picture when requesting to add a picture."
                                 level={3}
                     />
-                    <CardReportUsability title="It still won't work if it is not the default app for sms."
-                                         imageUrl1="/screenshots/defaultAppError.PNG"
+                    <CardReport title="It still won't work if it is not the default app for sms."
+                                         imageUrl="/screenshots/defaultAppError.PNG"
                                          imageUrl2="/screenshots/defaultMessage.png"
                                          level={3}
+                                         fixImageUrl={"/screenshots/fixDefaultRequest.PNG"}
                                          analysis="After allowing file access through the 'Tomar una foto' functionality, te app still wont send images and won't notify the user WHY.
                                          After trying different things we realized that the app won't send images if it is not the default sms app!
 
                                          Right now the only way for the user to solve this is to figure it out (how?) and go back to the main activity to set the app as the default app.
-                                         It is important to notice that the message shown is not only not noticeable but is also confusing and does not inform the user about why should he make it the default sms app."
+                                         It is important to notice that the message shown is not only not noticeable but is also confusing and does not inform the user about why should he make it the default sms app.
+                                         Apparently making the app default can also solve the above problem (at least in android 8.0), we recommend solving both in case this changes or doesn't work in other versions.
+                                         "
                                          recommendation="If this cannot be fixed, we recommend prompting the user to make the app the default app every time he wants to send a picture,
-                                         informing him that it won't work otherwise."
+                                         informing him that it won't work otherwise. This can be done as shown in the picture when requesting the gallery and when requesting to take a picture."
                     />
-                    <CardReportUsability title="Visually clean and attractive interface."
-                                         imageUrl1="/screenshots/SendMessage.jpeg"
+                    <CardReport          title="Visually clean and attractive interface."
+                                         imageUrl="/screenshots/SendMessage.jpeg"
                                          imageUrl2="/screenshots/mainActivity.jpeg"
                                          level={1}
                                          analysis="Aside from these problems, the app presents a visually clean and attractive interface where the primary color for buttons is customizable with a wide range of options.

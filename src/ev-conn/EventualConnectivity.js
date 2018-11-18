@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./EventualConnectivity.css"
 import CardReport from "../CardReport";
-import {Row, Col} from 'reactstrap';
+import {Col, Row} from 'reactstrap';
 
 export default class EventualConnectivity extends Component {
 

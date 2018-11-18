@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Card, CardBody, Col, Row} from 'reactstrap';
+import {Card, Col, Row} from 'reactstrap';
 import {Image} from "react-bootstrap";
 
 export default class ContributorStats extends Component {

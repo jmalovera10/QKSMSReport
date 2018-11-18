@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {Row} from "reactstrap";
 import ContributorStats from './modules/ContributorStats';
 import CardReport from "../CardReport";

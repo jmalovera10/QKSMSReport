@@ -10,10 +10,7 @@ import "./CardReportPerformance.css";
 
 export default class CardReportUsability extends Component {
 
-    constructor(props) {
-        super(props);
 
-    }
 
     render() {
 
