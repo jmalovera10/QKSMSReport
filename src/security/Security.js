@@ -23,13 +23,9 @@ export default class Security extends Component {
                     title="Not Debuggable"
                     level={3}
                     recommendation=""
-                    imageUrl2={""}
-                    useVideoIn1={false}
                     analysis="Since the application is declared as not debuggable it can't be acceded with the adb debugger
                     to step through the code."
-                    secondImage={false}
-                    imageUrl1={"/screenshots/Attacksurface.PNG"}
-                    isGoodPractice={true}
+                    imageUrl={"/screenshots/Attacksurface.PNG"}
                 />
             </div>
         );
