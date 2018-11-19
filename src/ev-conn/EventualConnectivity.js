@@ -24,7 +24,7 @@ As it is done when trying to make a call, that the app realises that airplane mo
                                 fixImageUrl="/screenshots/notificationImprovement.PNG"
                     />
                     <Col md="6">
-                        <h1>Scenarios</h1>
+                        <h1>Testing Scenarios</h1>
                         <CardScenario
                             scenario="Tested sending an image with airplane mode on, waited for 5 minutes."
                             results="Message 'Enviando...' was kept under the image. After turning airplane mode off the image was sent."
