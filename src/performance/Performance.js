@@ -8,14 +8,14 @@ export default class Performance extends Component {
         return (
             <div className="performance">
                 <Row>
-                    <CardReport title="Application CPU Use"
+                    <CardReport title="Application CPU Use By Repainting"
                                 videoId="_rXOZWx-YRE"
                                 analysis="When evaluating CPU performance of the app, we found that in the ComposeActivity
                                 the resources are consumed in repainting (repainting is indicated in the video by purple
                                 frames). Nevertheless, in the MainActivity the repaintings only occur due to UI scrolling
                                 or user input, which means that it has optimized CPU usage."
                                 level={2}
-                                recommendation="Avoid repainting in ComposeActivity."
+                                recommendation="Avoid repainting in ComposeActivity by removing all unnecessary backgrounds."
                     />
                     <CardReport title="MainActivity Memory Profiling"
                                 imageUrl="/screenshots/mainActivity.jpeg"
@@ -57,19 +57,6 @@ export default class Performance extends Component {
                                  We noticed that icons are not being recycled, doing this may improve the memory performance even further."
                                 level={1}
                                 recommendation="Recycle all bitmap icons."
-                    />
-
-
-                    <CardReport title="Application CPU Use By Repainting"
-                                level={2}
-                                imageUrl=""
-                                analysis="When evaluating CPU performance of the app, we found that in the ComposeActivity
-                                the resources are consumed in repainting (repainting is indicated in the video by purple
-                                frames). Nevertheless, in the MainActivity the repaintings only occur due to UI scrolling
-                                or user input, which means that it has optimized CPU usage."
-                                imageUrl2=""
-                                recommendation="Delete every background that is not necessary because it is the main cause
-                                for repainting thus CPU consumption."
                     />
                 </Row>
             </div>

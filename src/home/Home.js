@@ -57,8 +57,8 @@ export default class Home extends Component {
                 />
                 <FactModule
                     big={false}
-                    value=""
-                    imagePath=""
+                    value={<h2>10,974K</h2>}
+                    imagePath="/screenshots/download.png"
                 />
                 <ContributorStats contributors={this.state.contribStats} isCSLoaded={this.state.isCSLoaded}/>
                 <CardReport title="Exceptions are usually avoided on the code but not handled!"
