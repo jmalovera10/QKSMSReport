@@ -51,7 +51,7 @@ export default class Home extends Component {
             topContributors = this.state.contribStats.slice(0, this.state.csLoad);
         }
         return (
-            <Row>
+            <Row className="whole-home">
                 <FactModule
                     big={true}
                     value={<p>QKSMS is an open source replacement to the stock messaging app on Android. It is currently
