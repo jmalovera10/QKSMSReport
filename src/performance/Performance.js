@@ -9,6 +9,7 @@ export default class Performance extends Component {
             <div className="performance">
                 <Row>
                     <CardReport title="MainActivity Memory Profiling"
+                                level={3}
                                 imageUrl1="/screenshots/mainActivity.jpeg"
                                 useVideoIn1={false}
                                 analysis="We first made memory profiling on the application, starting with the MainActivity.
@@ -22,8 +23,12 @@ export default class Performance extends Component {
                                 secondImage={true}
                                 imageUrl2="/screenshots/MainActivityMemoryProfiling.png"
                                 isGoodPractice={false}
+                                recommendation="Try using WeakReference for all activity references passed to any helper or
+                                UI component. This attacks the strong reference problem directly. Another way to prevent this
+                                to happen, is by deleting any existing reference on the onDestroy() method."
                     />
                     <CardReport title="ComposeActivity Memory Profiling"
+                                level={3}
                                 imageUrl1="/screenshots/ComposeActivity.jpeg"
                                 useVideoIn1={false}
                                 analysis="Also, when rotating the phone repeatedly in the ComposeActivity, the memory again
@@ -34,9 +39,13 @@ export default class Performance extends Component {
                                 secondImage={true}
                                 imageUrl2="/screenshots/ComposeActivityMemoryProfiling.png"
                                 isGoodPractice={false}
+                                recommendation="Try using WeakReference for all activity references passed to any helper or
+                                UI component. This attacks the strong reference problem directly. Another way to prevent this
+                                to happen, is by deleting any existing reference on the onDestroy() method."
                     />
 
                     <CardReport title="Application Graphic Management"
+                                level={1}
                                 imageUrl1="/screenshots/GraphicManipulationGlide.png"
                                 useVideoIn1={false}
                                 analysis="On the other hand, the graphics memory curves during interaction with the app,
@@ -46,9 +55,11 @@ export default class Performance extends Component {
                                 reused efficiently as it can be observed in the figure."
                                 secondImage={false}
                                 isGoodPractice={true}
+                                recommendation=""
                     />
 
-                    <CardReport title="Application CPU Use"
+                    <CardReport title="Application CPU Use By Repainting"
+                                level={2}
                                 imageUrl1=""
                                 useVideoIn1={true}
                                 analysis="When evaluating CPU performance of the app, we found that in the ComposeActivity
@@ -57,7 +68,10 @@ export default class Performance extends Component {
                                 or user input, which means that it has optimized CPU usage."
                                 secondImage={false}
                                 imageUrl2=""
-                                isGoodPractice={true}/>
+                                isGoodPractice={false}
+                                recommendation="Delete every background that is not necessary because it is the main cause
+                                for repainting thus CPU consumption."
+                    />
                 </Row>
             </div>
         );
