@@ -1,25 +1,25 @@
 import React, {Component} from 'react';
-import CardReportSecurity from './modules/CardReportSecurity'
+import CardReport from "../CardReport";
 
 export default class Security extends Component {
 
     render(){
         return(
             <div>
-                <CardReportSecurity
+                <CardReport
                     title="Permission Management"
-                    level={1}
-                    recommendation=""
-                    imageUrl2={"/screenshots/PermissionDeclaration.PNG"}
-                    useVideoIn1={false}
+                    level={2}
+                    imageUrl={"/screenshots/PermissionUse.PNG"}
                     analysis="The application uses all the permissions declared in the AndroidManifest.xml, so there are no
-                    floating permissions to be exploited by an external application. "
-                    secondImage={true}
-                    imageUrl1={"/screenshots/PermissionUse.PNG"}
-                    isGoodPractice={true}
+                    floating permissions to be exploited by an external application.
+                    Nevertheless, the app does requests and use some permissions that it is not clear why it needs them or what it does with them.
+                    Internet permission is a weird think to ask when the app only sends sms."
+                    imageUrl2={"/screenshots/locationPermission.jpeg"}
+                    recommendation="Remove Internet and Location permissions or be straightforward to the users to why these permissions
+                     are needed."
                 />
 
-                <CardReportSecurity
+                <CardReport
                     title="Not Debuggable"
                     level={3}
                     recommendation=""
