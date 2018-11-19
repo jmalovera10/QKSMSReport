@@ -1,7 +1,7 @@
 import "./CardReport.css"
 import React, {Component} from 'react';
 import {Image} from "react-bootstrap";
-import {Card, Col, Progress} from 'reactstrap';
+import {Card} from 'reactstrap';
 
 
 // App component - represents the whole app

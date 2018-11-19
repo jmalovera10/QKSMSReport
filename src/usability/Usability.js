@@ -15,7 +15,7 @@ export default class Usability extends Component {
                 <Row>
                     <CardReport          title="Sending a picture does not ask for files permissions."
                                          imageUrl="/screenshots/blancImage.jpeg"
-                                         imageUrl2="/screenshots/ExceptionsRequestPermissions.PNG"
+                                         imageUrl2=""   //"/screenshots/ExceptionsRequestPermissions.PNG"
                                          analysis="While trying to send a picture we noticed that the picture was appended blanc o the message and when sending it it just disappeared without notifying anything.
                              After enabling exceptions programmatically. We realized it was a security exception that was thrown but the app never realized it.
                              Three errors where detected: 1. The app does not ask for the permission to access files when first installed.
