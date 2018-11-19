@@ -1,6 +1,10 @@
 {
-  "name": "telegram-report",
+  "name": "qksms-report",
   "version": "0.1.0",
+  "engines": {
+    "npm": "6.4.1",
+    "node": "10.13.0"
+  },
   "private": true,
   "dependencies": {
     "react": "^16.6.0",
