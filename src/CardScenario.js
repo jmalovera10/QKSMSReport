@@ -16,7 +16,7 @@ export default class CardScenario extends Component {
                 <p><strong>Scenario description:</strong>{this.props.scenario}</p>
                 <p><strong>Results: </strong>{this.props.results}</p>
                 {this.props.imageResults ?
-                    <Image className="image2" src={this.props.imageResults} rounded={true} responsive={true}/> :
+                    <Image className="image" src={this.props.imageResults} rounded={true} responsive={true}/> :
                     <div></div>}
             </Card>
 

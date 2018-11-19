@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Row,Col,Card} from "reactstrap";
 import FactModule from "./modules/FactModule";
 import {Image} from "react-bootstrap";
+import "./Home.css";
 
 export default class Home extends Component {
 
@@ -59,7 +60,11 @@ export default class Home extends Component {
                         <a href="https://f-droid.org/packages/com.moez.QKSMS/">F-Droid</a></p>}
                     imagePath="/qksmsLogo.png"
                 />
-
+                <FactModule
+                    big={false}
+                    value={<h5>Downloads: 10,974K</h5>}
+                    imagePath="/screenshots/download.png"
+                />
                 <Col sm="12" md="6">
                     <Card body={true} className="contrib-card">
                         <h1>Contributor Statistics</h1>
@@ -69,7 +74,7 @@ export default class Home extends Component {
                             {
                                 topContributors.map((contr) =>
                                     <Col sm="4" md="2">
-                                        <Image src={contr.author.avatar_url} rounded={true} responsive={true}/>
+                                        <Image className="image" src={contr.author.avatar_url} rounded={true} responsive={true}/>
                                         <h4>{contr.author.login}</h4>
                                         <h5>{contr.total}</h5>
                                     </Col>
@@ -78,11 +83,7 @@ export default class Home extends Component {
                         </Row>
                     </Card>
                 </Col>
-                <FactModule
-                    big={false}
-                    value={<h5>Downloads: 10,974K</h5>}
-                    imagePath="/screenshots/download.png"
-                />
+
             </Row>
 
         );
