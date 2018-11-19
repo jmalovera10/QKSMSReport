@@ -18,18 +18,23 @@ export default class Performance extends Component {
                                 recommendation="Avoid repainting in ComposeActivity by removing all unnecessary backgrounds."
                     />
                     <CardReport title="MainActivity Memory Profiling"
-                                imageUrl="/screenshots/mainActivity.jpeg"
+                                imageUrl="/screenshots/memoryPerformance10TurnsbackAndForth.PNG"
                                 level ={3}
-                                analysis="We first made memory profiling on the application, starting with the MainActivity.
+                                analysis={<div><p>We first made memory profiling on the application, starting with the MainActivity.
                                  We found that it has strong relationships with UI components, which doubles the memory
                                  consumption when the app is under rotation stress. From the heap dumps it can be seen that
                                  Java objects are created and maintained in memory after several rotation events. For example,
                                  the messages’ RecycleView object is created and maintained over and over again, which means
                                  that this UI component has a strong reference to the MainActivity, which is a bad memory
                                  management practice. As it can be seen from the heap dump, there are as many RecyclerView
-                                 instances as rotations made."
-                                imageUrl2="/screenshots/MainActivityMemoryProfiling.png"
-                                recommendation="Changing strong relationships for weak relationships."
+                                    instances as rotations made.</p>
+                                    <p><strong>Testing scenario:</strong> We re-initialize the app and directly did 10 turns back and forth of the screen.
+                                        The results after the optimizations are in the next image</p>
+                                </div>}
+                                imageUrl2="/screenshots/memoryPerformance10TurnsbackAndForthWithImprovements.PNG"
+                                recommendation="Changing strong relationships for weak relationships. On the OnDestroy set references to null.
+                                We did some changes (look at repository) and made some improvement (of 15 MB so about 10%).
+                                But the problem is still there, it seems some lazy initializations don't allow weak referencing."
                     />
                     <CardReport title="ComposeActivity Memory Profiling"
                                 imageUrl="/screenshots/ComposeActivity.jpeg"

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {Row} from "reactstrap";
-import ContributorStats from './modules/ContributorStats';
-import CardReport from "../CardReport";
+import {Row,Col,Card} from "reactstrap";
 import FactModule from "./modules/FactModule";
+import {Image} from "react-bootstrap";
 
 export default class Home extends Component {
 
@@ -26,7 +25,8 @@ export default class Home extends Component {
                 let contribs = result.map((user) => {
                     return {
                         author: user.author,
-                        total: user.total
+                        total: user.total,
+                        csLoad: 5
                     };
                 });
                 contribs.sort((a, b) => (a.total > b.total) ? -1 : ((a.total < b.total) ? 1 : 0));
@@ -45,6 +45,10 @@ export default class Home extends Component {
     }
 
     render() {
+        let topContributors = [];
+        if (this.state.isCSLoaded) {
+            topContributors = this.state.contribStats.slice(0, this.state.csLoad);
+        }
         return (
             <Row>
                 <FactModule
@@ -55,24 +59,32 @@ export default class Home extends Component {
                         <a href="https://f-droid.org/packages/com.moez.QKSMS/">F-Droid</a></p>}
                     imagePath="/qksmsLogo.png"
                 />
+
+                <Col sm="12" md="6">
+                    <Card body={true} className="contrib-card">
+                        <h1>Contributor Statistics</h1>
+                        <h4>These are the contributor statistics for QKSMS project</h4>
+                        <h2>Top Contributor Commits:</h2>
+                        <Row>
+                            {
+                                topContributors.map((contr) =>
+                                    <Col sm="4" md="2">
+                                        <Image src={contr.author.avatar_url} rounded={true} responsive={true}/>
+                                        <h4>{contr.author.login}</h4>
+                                        <h5>{contr.total}</h5>
+                                    </Col>
+                                )
+                            }
+                        </Row>
+                    </Card>
+                </Col>
                 <FactModule
                     big={false}
-                    value={<h2>10,974K</h2>}
+                    value={<h5>Downloads: 10,974K</h5>}
                     imagePath="/screenshots/download.png"
                 />
-                <ContributorStats contributors={this.state.contribStats} isCSLoaded={this.state.isCSLoaded}/>
-                <CardReport title="Exceptions are usually avoided on the code but not handled!"
-                            imageUrl ="qksmsLogo.png"
-                            analysis="The code for loading a multimedia message shows that exceptions are being avoided but not handled.
-                            Sometimes, 'try' is used and then directly a finally to end the procedure without using a catch. Other times the catch is used
-                             directly to return a specific value without even printing the exception or noting on the code.
-                             This makes debugging really difficult.
-                             For a lot of cases we enabled the exception printing and found out some improving measures that could be
-                             taken after analysing them. The most interesting ones can be found at the usability tab."
-                            recommendation = "Enable printing of exceptions will make it easier to find further errors."
-                level = {2}
-                />
             </Row>
+
         );
     }
 }

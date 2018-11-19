@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Card, Col, Row} from 'reactstrap';
 import {Image} from "react-bootstrap";
+import FactModule from "./FactModule";
 
 export default class ContributorStats extends Component {
 
@@ -19,6 +20,17 @@ export default class ContributorStats extends Component {
         }
         return (
             <Col sm="12" md="6">
+                <Row>
+                <FactModule
+                    big={true}
+                    value={<p>QKSMS is an open source replacement to the stock messaging app on Android. It is currently
+                        available on the <a href="https://play.google.com/store/apps/details?id=com.moez.QKSMS&hl=en">
+                            Google Play Store</a> and on
+                        <a href="https://f-droid.org/packages/com.moez.QKSMS/">F-Droid</a></p>}
+                    imagePath="/qksmsLogo.png"
+                />
+
+                    <Col sm="12" md="6">
                 <Card body={true} className="contrib-card">
                     <h1>Contributor Statistics</h1>
                     <h4>These are the contributor statistics for QKSMS project</h4>
@@ -35,6 +47,13 @@ export default class ContributorStats extends Component {
                         }
                     </Row>
                 </Card>
+                    </Col>
+                    <FactModule
+                        big={false}
+                        value={<h5>Downloads: 10,974K</h5>}
+                        imagePath="/screenshots/download.png"
+                    />
+                </Row>
             </Col>
         );
     }
