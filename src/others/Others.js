@@ -18,6 +18,17 @@ export default class Others extends Component {
                             level = {2}
                 />
 
+                <CardReport title="App Crash By Border Case"
+                            analysis="When executing the android adb monkey analysis with a 10000 event amount, we found a
+                            border case related to a tap of view that no longer exists. In other words, this error occurred
+                            when a list element was deleted and pressed during deletion."
+                            recommendation="To avoid this border case, the recommended action is to ignore every user input
+                            for the view being deleted, so when the element is pressed on deletion, nothing happens."
+                            level={2}
+                            videoId="X8SFyOYzet4"
+                            fixImageUrl="/screenshots/BorderCaseFix.png"
+                />
+
             </Row>
         );
     }

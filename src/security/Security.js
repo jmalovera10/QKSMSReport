@@ -21,8 +21,8 @@ export default class Security extends Component {
 
                 <CardReport
                     title="Not Debuggable"
-                    level={3}
-                    recommendation=""
+                    level={1}
+                    recommendation="Maintain this value for production."
                     analysis="Since the application is declared as not debuggable it can't be acceded with the adb debugger
                     to step through the code."
                     imageUrl={"/screenshots/Attacksurface.PNG"}
