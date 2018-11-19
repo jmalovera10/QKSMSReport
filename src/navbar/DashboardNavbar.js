@@ -44,6 +44,12 @@ export default class DashboardNavbar extends Component {
                             Security
                         </div>
                     </NavItem>
+                    <NavItem eventKey={4} onClick={this.props.goToOther}>
+                        <Glyphicon glyph="plus-sign" bsClass="glyphicon"/>
+                        <div>
+                            Others
+                        </div>
+                    </NavItem>
                 </Nav>
             </Navbar>
         );
@@ -54,5 +60,6 @@ DashboardNavbar.propTypes = {
     goToHome: PropTypes.func.isRequired,
     goToEvConn: PropTypes.func.isRequired,
     goToPerformance: PropTypes.func.isRequired,
-    goToSecurity: PropTypes.func.isRequired
+    goToSecurity: PropTypes.func.isRequired,
+    goToOther : PropTypes.func.isRequired
 };

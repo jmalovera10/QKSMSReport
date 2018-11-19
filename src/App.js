@@ -4,6 +4,7 @@ import Home from "./home/Home";
 import EventualConnectivity from "./ev-conn/EventualConnectivity";
 import Performance from "./performance/Performance";
 import Security from "./security/Security";
+import Others from "./others/Others";
 
 
 import './App.css';
@@ -23,6 +24,7 @@ class App extends Component {
         this.goToPerformance = this.goToPerformance.bind(this);
         this.goToSecurity = this.goToSecurity.bind(this);
         this.goToUsability = this.goToUsability.bind(this);
+        this.goToOther = this.goToOther.bind(this);
     }
 
     goToHome() {
@@ -40,8 +42,13 @@ class App extends Component {
     goToSecurity() {
         this.setState({position: "security"});
     }
+
     goToUsability() {
         this.setState({position: "usability"});
+    }
+
+    goToOther() {
+        this.setState({position: "other"});
     }
 
     render() {
@@ -49,7 +56,7 @@ class App extends Component {
             <div className="App">
                 <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn}
                                  goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}
-                                goToUsability={this.goToUsability}
+                                goToUsability={this.goToUsability} goToOther={this.goToOther}
                 />
                 {
                     this.state.position === "home" ?
@@ -62,7 +69,9 @@ class App extends Component {
                                 <Security/>
                                 : this.state.position === "usability" ?
                                     <Usability/>
-                                    : null
+                                    : this.state.position=== "other"?
+                                        <Others/>
+                                        :null
                 }
             </div>
         );
