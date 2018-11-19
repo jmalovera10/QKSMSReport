@@ -21,7 +21,7 @@ As it is done when trying to make a call, that the app realises that airplane mo
                                  Try not to recreate the whole activity when clicking the notification.
                                  Maybe you could even check for airplane mode when trying to send a message and prompt the user to disable it."
                                 level={1}
-                                fixImageUrl ="/screenshots/notificationImprovement.PNG"
+                                fixImageUrl="/screenshots/notificationImprovement.PNG"
                     />
                     <Col md="6">
                         <h1>Scenarios</h1>

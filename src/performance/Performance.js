@@ -34,13 +34,15 @@ export default class Performance extends Component {
                     <CardReport title="ComposeActivity Memory Profiling"
                                 imageUrl="/screenshots/ComposeActivity.jpeg"
                                 level ={3}
+
                                 analysis="Also, when rotating the phone repeatedly in the ComposeActivity, the memory again
                                 increases uncontrollably. This happens because of the same strong relations maintained with
                                 the activity within the RecyclerView. The memory behavior
                                 app for this experiment is shown in the figure."
                                 imageUrl2="/screenshots/ComposeActivityMemoryProfiling.png"
-                                recommendation="To address this issue, the RecyclerView may use a weak
-                                relation specified by parameter, in order to make updates and selections."
+                                recommendation="Try using WeakReference for all activity references passed to any helper or
+                                UI component. This attacks the strong reference problem directly. Another way to prevent this
+                                to happen, is by deleting any existing reference on the onDestroy() method."
                     />
 
 
@@ -58,6 +60,17 @@ export default class Performance extends Component {
                     />
 
 
+                    <CardReport title="Application CPU Use By Repainting"
+                                level={2}
+                                imageUrl=""
+                                analysis="When evaluating CPU performance of the app, we found that in the ComposeActivity
+                                the resources are consumed in repainting (repainting is indicated in the video by purple
+                                frames). Nevertheless, in the MainActivity the repaintings only occur due to UI scrolling
+                                or user input, which means that it has optimized CPU usage."
+                                imageUrl2=""
+                                recommendation="Delete every background that is not necessary because it is the main cause
+                                for repainting thus CPU consumption."
+                    />
                 </Row>
             </div>
         );
