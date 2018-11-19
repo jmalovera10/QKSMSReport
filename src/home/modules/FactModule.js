@@ -7,9 +7,8 @@ export default class FactModule extends Component {
 
     render() {
         return (
-            <Col sm={"12"} md={this.props.big?"6":"3"}>
-                <Card>
-                    <h2>{this.props.title}</h2>
+            <Col sm={"12"} md={this.props.big ? "6" : "3"}>
+                <Card className="center-items">
                     <Image src={this.props.imagePath} rounded={true} responsive={true}/>
                     {this.props.value}
                 </Card>
@@ -20,7 +19,6 @@ export default class FactModule extends Component {
 
 FactModule.propTypes = {
     big: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
     value: PropTypes.object.isRequired,
     imagePath: PropTypes.string.isRequired
 };

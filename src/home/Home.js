@@ -49,12 +49,16 @@ export default class Home extends Component {
             <Row>
                 <FactModule
                     big={true}
-                    title="Description"
                     value={<p>QKSMS is an open source replacement to the stock messaging app on Android. It is currently
                         available on the <a href="https://play.google.com/store/apps/details?id=com.moez.QKSMS&hl=en">
                             Google Play Store</a> and on
                         <a href="https://f-droid.org/packages/com.moez.QKSMS/">F-Droid</a></p>}
-                    imagePath="/screenshots/"
+                    imagePath="/qksmsLogo.png"
+                />
+                <FactModule
+                    big={false}
+                    value=""
+                    imagePath=""
                 />
                 <ContributorStats contributors={this.state.contribStats} isCSLoaded={this.state.isCSLoaded}/>
                 <CardReport title="Exceptions are usually avoided on the code but not handled!"
