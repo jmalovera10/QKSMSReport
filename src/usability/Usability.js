@@ -22,7 +22,7 @@ export default class Usability extends Component {
                              2. The app does not ask for the permission when clicking 'Adjuntar una foto' but only on 'Tomar una foto'.
                              3. When the exception is launched instead of ignoring it the app should prompt the user for the permissions needed.
                              "
-                                         fixImageUrl={"/screenshots/simplefixMediaFileRequest.PNG"}
+                                         fixImageUrl="/screenshots/simplefixMediaFileRequest.PNG"
                                 recommendation="We recommend adding these permissions requests at these 3 steps. Or to make it simpler just add it as shown in the picture when requesting to add a picture."
                                 level={3}
                     />
@@ -30,7 +30,7 @@ export default class Usability extends Component {
                                          imageUrl="/screenshots/defaultAppError.PNG"
                                          imageUrl2="/screenshots/defaultMessage.png"
                                          level={3}
-                                         fixImageUrl={"/screenshots/fixDefaultRequest.PNG"}
+                                         fixImageUrl="/screenshots/fixDefaultRequest.PNG"
                                          analysis="After allowing file access through the 'Tomar una foto' functionality, te app still wont send images and won't notify the user WHY.
                                          After trying different things we realized that the app won't send images if it is not the default sms app!
                                          Apparently for some users no message will be sent if it is not made the default app. But in my case is just images, and there is no way for knowing it!
