@@ -28,7 +28,7 @@ export default class Performance extends Component {
                                  that this UI component has a strong reference to the MainActivity, which is a bad memory
                                  management practice. As it can be seen from the heap dump, there are as many RecyclerView
                                     instances as rotations made.</p>
-                                    <p><strong>Testing scenario:</strong> We re-initialize the app and directly did 10 turns back and forth of the screen.
+                                    <p><strong>Testing scenario:</strong>On a Xperia running android 7.0 we re-initialize the app and directly did 10 turns back and forth of the screen.
                                         The results after the optimizations are in the next image</p>
                                 </div>}
                                 imageUrl2="/screenshots/memoryPerformance10TurnsbackAndForthWithImprovements.PNG"
