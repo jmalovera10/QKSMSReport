@@ -27,6 +27,19 @@ export default class Security extends Component {
                     to step through the code."
                     imageUrl={"/screenshots/Attacksurface.PNG"}
                 />
+
+                <CardReport
+                    title="Component External Access"
+                    level={1}
+                    recommendation="Change the 'exported' attribute to FALSE for the services that are merely called by
+                    the application."
+                    analysis="Since the app core functionality is SMS service, it must not expose send message services to
+                    other applications without any kind of filter or permission. Fortunately, none of these services are exposed
+                    for any application to exploit the vulnerability. Nevertheless, there are a series of activities, services and
+                    broadcast receivers exposed to the system. In the figure, 1, 2, and 3 are the exported activities, services,
+                    and receivers, respectively."
+                    imageUrl={"/screenshots/ActivityInfo.png"}
+                />
             </div>
         );
     }
