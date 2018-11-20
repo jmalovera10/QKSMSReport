@@ -20,8 +20,9 @@ export default class Performance extends Component {
                                             UI scrolling
                                             or user input, which means that it has optimized CPU usage.</p>
                                         <p>
-                                            <strong>Testing scenario:</strong> the application was navigated on normal conditions,
-                                             using the surface change developer tool.
+                                            <strong>Testing scenario:</strong> the application was navigated on normal
+                                            conditions,
+                                            using the surface change developer tool.
                                         </p>
                                     </div>
                                 }
@@ -64,17 +65,28 @@ export default class Performance extends Component {
 
                     />
                     <CardReport title="ComposeActivity Memory Profiling"
-                                imageUrl="/screenshots/ComposeActivity.jpeg"
+                                imageUrl="/screenshots/ComposeActivityMemoryBeforeFix.PNG"
                                 level={3}
 
-                                analysis="Also, when rotating the phone repeatedly in the ComposeActivity, the memory again
-                                increases uncontrollably. This happens because of the same strong relations maintained with
-                                the activity within the RecyclerView. The memory behavior
-                                app for this experiment is shown in the figure."
-                                imageUrl2="/screenshots/ComposeActivityMemoryProfiling.png"
+                                analysis={
+                                    <div>
+                                        <p>Also, when rotating the phone repeatedly in the ComposeActivity, the memory
+                                            again
+                                            increases uncontrollably. This happens because of the same strong relations
+                                            maintained with
+                                            the activity within the chips used in the UI. The memory behavior
+                                            app for this experiment is shown in the figure.</p>
+                                        <p>
+                                            <strong>Testing scenario: </strong> application in ComposeActivity under rotation
+                                            stress until 20 rotations.
+                                        </p>
+                                    </div>
+                                }
+                                imageUrl2="/screenshots/ComposeActivityMemoryAfterFix.png"
                                 recommendation="Try using WeakReference for all activity references passed to any helper or
                                 UI component. This attacks the strong reference problem directly. Another way to prevent this
-                                to happen, is by deleting any existing reference on the onDestroy() method."
+                                to happen, is by deleting any existing reference on the onDestroy() method. This fix proved to
+                                reduce the memory consumption up to 10MB."
                                 fixImageUrl="/screenshots/ComposeActivityRelationFix.PNG"
                     />
 
