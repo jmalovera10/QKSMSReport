@@ -65,6 +65,52 @@ export default class Home extends Component {
                     value={<h5>Downloads: 10,974K</h5>}
                     imagePath="/screenshots/download.png"
                 />
+                <FactModule
+                    big={false}
+                    value={
+                        <div className="col-12">
+                            <h1>4/5</h1>
+                            <h4>Rating on play store</h4>
+                        </div>
+                    }
+                    imagePath="/screenshots/PlayStore.PNG"
+                />
+                <FactModule
+                    big={false}
+                    value={
+                        <div>
+                            <i className="fas fa-code fa-5x"></i>
+                            <h4>Code</h4>
+                            <ul>
+                                <li><h3>Java: 56%</h3></li>
+                                <li><h3>Kotlin: 44%</h3></li>
+                            </ul>
+                        </div>
+                    }
+                    imagePath={""}
+                />
+                <FactModule
+                    big={false}
+                    value={
+                        <div>
+                            <i className="fas fa-exclamation-circle fa-5x"></i>
+                            <h3>Issues</h3>
+                            <h2>228</h2>
+                        </div>
+                    }
+                    imagePath={""}
+                />
+                <FactModule
+                    big={false}
+                    value={
+                        <div>
+                            <i className="fas fa-history fa-5x"></i>
+                            <h3>Commits</h3>
+                            <h2>1835</h2>
+                        </div>
+                    }
+                    imagePath={""}
+                />
                 <Col sm="12" md="6">
                     <Card body={true} className="contrib-card">
                         <h1>Contributor Statistics</h1>
@@ -75,7 +121,7 @@ export default class Home extends Component {
                                 topContributors.map((contr) =>
                                     <Col sm="4" md="2">
                                         <Image className="image" src={contr.author.avatar_url} rounded={true} responsive={true}/>
-                                        <h4>{contr.author.login}</h4>
+                                        <h4>{<a href={contr.author.html_url} target="_blank">{contr.author.login}</a>}</h4>
                                         <h5>{contr.total}</h5>
                                     </Col>
                                 )

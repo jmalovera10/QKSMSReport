@@ -40,6 +40,7 @@ export default class Security extends Component {
                     and receivers, respectively."
                     imageUrl={"/screenshots/ActivityInfo.png"}
                 />
+                <h3><a href="/detailedSecurityReport.pdf" target="_blank">Detailed report link</a></h3>
             </div>
         );
     }
