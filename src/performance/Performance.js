@@ -31,6 +31,7 @@ export default class Performance extends Component {
                     />
                     <CardReport title="MainActivity Memory Profiling"
                                 imageUrl="/screenshots/memoryPerformance10TurnsbackAndForth.PNG"
+
                                 level={3}
                                 analysis={
                                     <div>
@@ -52,7 +53,7 @@ export default class Performance extends Component {
                                         </p>
                                         <p>
                                             <strong>Testing scenario:</strong>
-                                            We re-initialize the app and directly did 10 turns back and forth of the
+                                            On a Xperia running android 7.0 we re-initialize the app and directly did 10 turns back and forth of the
                                             screen.
                                             The results after the optimizations are in the next image
                                         </p>
