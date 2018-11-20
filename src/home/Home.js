@@ -69,8 +69,8 @@ export default class Home extends Component {
                     big={false}
                     value={
                         <div className="col-12">
-                            <h1>4/5</h1>
-                            <h4>Rating on play store</h4>
+                            <h5>4/5</h5>
+                            <h5>Rating on play store</h5>
                         </div>
                     }
                     imagePath="/screenshots/PlayStore.PNG"
@@ -80,10 +80,10 @@ export default class Home extends Component {
                     value={
                         <div>
                             <i className="fas fa-code fa-5x"></i>
-                            <h4>Code</h4>
+                            <h5>Code</h5>
                             <ul>
-                                <li><h3>Java: 56%</h3></li>
-                                <li><h3>Kotlin: 44%</h3></li>
+                                <li><h5>Java: 56%</h5></li>
+                                <li><h5>Kotlin: 44%</h5></li>
                             </ul>
                         </div>
                     }
@@ -94,8 +94,8 @@ export default class Home extends Component {
                     value={
                         <div>
                             <i className="fas fa-exclamation-circle fa-5x"></i>
-                            <h3>Issues</h3>
-                            <h2>228</h2>
+                            <h5>Issues</h5>
+                            <h5>228</h5>
                         </div>
                     }
                     imagePath={""}
@@ -105,13 +105,13 @@ export default class Home extends Component {
                     value={
                         <div>
                             <i className="fas fa-history fa-5x"></i>
-                            <h3>Commits</h3>
-                            <h2>1835</h2>
+                            <h5>Commits</h5>
+                            <h5>1835</h5>
                         </div>
                     }
                     imagePath={""}
                 />
-                <Col sm="12" md="6">
+                <Col sm="12" md="12">
                     <Card body={true} className="contrib-card">
                         <h1>Contributor Statistics</h1>
                         <h4>These are the contributor statistics for QKSMS project</h4>
