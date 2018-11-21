@@ -14,7 +14,7 @@ export default class Usability extends Component {
         return (
             <div className="usability">
                 <Row>
-                    <ReportHelp/>
+
                     <CardReport title="Sending a picture does not ask for files permissions."
                                 imageUrl="/screenshots/blancImage.jpeg"
                                 imageUrl2=""   //"/screenshots/ExceptionsRequestPermissions.PNG"

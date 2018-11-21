@@ -3,6 +3,7 @@ import {Row,Col,Card} from "reactstrap";
 import FactModule from "./modules/FactModule";
 import {Image} from "react-bootstrap";
 import "./Home.css";
+import ReportHelp from "../ReportHelp";
 
 export default class Home extends Component {
 
@@ -133,8 +134,11 @@ export default class Home extends Component {
                         </Row>
                     </Card>
                 </Col>
-
+                <Col sm="12">
+                <ReportHelp/>
+                </Col>
             </Row>
+
 
         );
     }

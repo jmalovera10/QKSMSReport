@@ -8,7 +8,6 @@ export default class Security extends Component {
         return (
             <div>
 
-                <ReportHelp/>
 
                 <CardReport
                     title="Permission Management"

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import CardReport from "../CardReport";
 import {Row} from 'reactstrap';
-import ReportHelp from "../ReportHelp";
 
 export default class Performance extends Component {
 
@@ -9,7 +8,7 @@ export default class Performance extends Component {
         return (
             <div className="performance">
                 <Row>
-                    <ReportHelp/>
+
                     <CardReport title="Application CPU Use By Repainting"
                                 videoId="_rXOZWx-YRE"
                                 analysis={
@@ -108,6 +107,29 @@ export default class Performance extends Component {
                                  We noticed that icons are not being recycled, doing this may improve the memory performance even further."
                                 level={1}
                                 recommendation="Keep recycling all bitmap icons used in the applications."
+                    />
+                    <CardReport title="Micro-Optimizations"
+                                imageUrl="/screenshots/microOptsErrors.PNG"
+                                imageUrl2="/screenshots/microOptsErrors2.PNG"
+                                fixImageUrl="/screenshots/microOptsFix2.PNG"
+                                analysis="In our manual static analysis of the code we found no unoptimal usage of structures. Primitive array types appear to be used when possible and no complicated structures where found.
+                                However, we did find a lot of iterators which is a performance bad practice in methods that are repeatedly called. We also found one case of objects declared inside a loop which consumes unnecessary memory.
+                                Finally we found that some portions of the code used findItem which is known to be a resource eager method and it was not possible changing it without greatly changing the code.   "
+                                level={2}
+                                recommendation="Avoid using iterators. Check the whole project to find usages. Avoid initializing objects in loops.
+                                Avoid using findById as it is energy greedy, at this point the code is made so that this usage is mandatory but repetitive it could be useful to change it.
+                                See pull-request for all the places we found this errors."
+                    />
+                    <CardReport title="Greatly modularize code"
+                                imageUrl="/screenshots/"
+                                imageUrl2="/screenshots/"
+                                fixImageUrl="/screenshots/"
+                                analysis="We find that the code is too modularized. For a two to three activities application it seems highly unnecessary the number of classes used.
+                                This adds a performance overhead in terms of memory because of the amount of code and of instances created and in terms of performance because it makes it longer to create each element.
+                                This might be the primary responsible for the really poor performance of what seems like a simple application.
+                                Furthermore, this is usually a maintainability tactic but when taken to this extent it only seems to make it harder to maintain or modify code especially since it is not well documented."
+                                level={2}
+                                recommendation="Reduce modularity as much as possible. Document code."
                     />
                 </Row>
             </div>

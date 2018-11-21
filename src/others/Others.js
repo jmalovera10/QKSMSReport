@@ -7,7 +7,6 @@ export default class Others extends Component {
     render() {
         return (
             <Row>
-                <ReportHelp/>
                 <CardReport title="Exceptions are usually avoided on the code but not handled!"
                             imageUrl="qksmsLogo.png"
                             analysis="The code for loading a multimedia message shows that exceptions are being avoided but not handled.
