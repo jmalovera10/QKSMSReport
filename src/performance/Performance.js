@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CardReport from "../CardReport";
 import {Row} from 'reactstrap';
+import ReportHelp from "../ReportHelp";
 
 export default class Performance extends Component {
 
@@ -8,6 +9,7 @@ export default class Performance extends Component {
         return (
             <div className="performance">
                 <Row>
+                    <ReportHelp/>
                     <CardReport title="Application CPU Use By Repainting"
                                 videoId="_rXOZWx-YRE"
                                 analysis={
@@ -53,7 +55,8 @@ export default class Performance extends Component {
                                         </p>
                                         <p>
                                             <strong>Testing scenario:</strong>
-                                            On a Xperia running android 7.0 we re-initialize the app and directly did 10 turns back and forth of the
+                                            On a Xperia running android 7.0 we re-initialize the app and directly did 10
+                                            turns back and forth of the
                                             screen.
                                             The results after the optimizations are in the next image
                                         </p>
@@ -78,12 +81,13 @@ export default class Performance extends Component {
                                             the activity within the chips used in the UI. The memory behavior
                                             app for this experiment is shown in the figure.</p>
                                         <p>
-                                            <strong>Testing scenario: </strong> application in ComposeActivity under rotation
+                                            <strong>Testing scenario: </strong> application in ComposeActivity under
+                                            rotation
                                             stress until 20 rotations.
                                         </p>
                                     </div>
                                 }
-                                imageUrl2="/screenshots/ComposeActivityMemoryAfterFix.png"
+                                imageUrl2="/screenshots/ComposeActivityMemoryAfterFix.PNG"
                                 recommendation="Try using WeakReference for all activity references passed to any helper or
                                 UI component. This attacks the strong reference problem directly. Another way to prevent this
                                 to happen, is by deleting any existing reference on the onDestroy() method. This fix proved to
@@ -93,6 +97,7 @@ export default class Performance extends Component {
 
 
                     <CardReport title="Application Graphic Management"
+                                goodPractice={true}
                                 imageUrl="/screenshots/GraphicManipulationGlide.png"
                                 analysis="On the other hand, the graphics memory curves during interaction with the app,
                                 remain constant over time. This is because the application uses the Glide library to manage

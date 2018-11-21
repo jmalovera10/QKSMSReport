@@ -12,17 +12,17 @@ export default class CardReport extends Component {
     render() {
         let style = "success";
         let level = 30;
-        let priority = "priority low";
+        let priority = "PRIORITY LOW";
         switch (this.props.level) {
             case 2:
                 style = "warning";
                 level = 60;
-                priority = "priority intermediate";
+                priority = "PRIORITY INTERMEDIATE";
                 break;
             case 3:
                 style = "danger";
                 level = 100;
-                priority = "priority high";
+                priority = "PRIORITY HIGH";
                 break;
             default:
                 break;
@@ -52,6 +52,17 @@ export default class CardReport extends Component {
         return (
             <Col sm="12" md="6">
                 <Card className="contrib-card-report">
+                    <h1>
+                        {
+                            this.props.goodPractice?
+                                <span className="badge badge-success">
+                                    GOOD PRACTICE
+                                </span>
+                                : <span className="badge badge-error">
+                                    PROBLEM
+                                </span>
+                        }
+                    </h1>
                     <Progress color={style} value={level}>{priority}</Progress>
                     <h1>{this.props.title}</h1>
                     {this.props.imageUrl ?

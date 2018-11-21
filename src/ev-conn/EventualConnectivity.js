@@ -3,6 +3,7 @@ import "./EventualConnectivity.css"
 import CardReport from "../CardReport";
 import {Col, Row} from 'reactstrap';
 import CardScenario from "../CardScenario";
+import ReportHelp from "../ReportHelp";
 
 export default class EventualConnectivity extends Component {
 
@@ -10,6 +11,7 @@ export default class EventualConnectivity extends Component {
         return (
             <div className="ev-conn">
                 <Row>
+                    <ReportHelp/>
                     <CardReport title="Eventual connectivity is for the most part well handled."
                                 imageUrl="/screenshots/notificationEC.PNG"
                                 analysis="Eventual connectivity is actually well handled. When everything needed is enabled, messages that cannot be sent are kept as “sending” and messages that failed in the sending process generate a notification that is shown to the user and prompts him to retry.

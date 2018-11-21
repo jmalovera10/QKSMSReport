@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import CardReport from "../CardReport";
+import ReportHelp from "../ReportHelp";
 
 export default class Security extends Component {
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
+
+                <ReportHelp/>
+
                 <CardReport
                     title="Permission Management"
                     level={2}
@@ -21,6 +25,7 @@ export default class Security extends Component {
 
                 <CardReport
                     title="Not Debuggable"
+                    goodPractice={true}
                     level={1}
                     recommendation="Maintain this value for production."
                     analysis="Since the application is declared as not debuggable it can't be acceded with the adb debugger
