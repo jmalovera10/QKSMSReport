@@ -83,7 +83,7 @@ export default class Performance extends Component {
                                         </p>
                                     </div>
                                 }
-                                imageUrl2="/screenshots/ComposeActivityMemoryAfterFix.png"
+                                imageUrl2="/screenshots/ComposeActivityMemoryAfterFix.PNG"
                                 recommendation="Try using WeakReference for all activity references passed to any helper or
                                 UI component. This attacks the strong reference problem directly. Another way to prevent this
                                 to happen, is by deleting any existing reference on the onDestroy() method. This fix proved to
@@ -93,6 +93,7 @@ export default class Performance extends Component {
 
 
                     <CardReport title="Application Graphic Management"
+                                goodPractice={true}
                                 imageUrl="/screenshots/GraphicManipulationGlide.png"
                                 analysis="On the other hand, the graphics memory curves during interaction with the app,
                                 remain constant over time. This is because the application uses the Glide library to manage

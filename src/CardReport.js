@@ -1,7 +1,7 @@
 import "./CardReport.css"
 import React, {Component} from 'react';
 import {Image} from "react-bootstrap";
-import {Card, Col, Progress} from 'reactstrap';
+import {Card, Col, Progress, Badge} from 'reactstrap';
 import YouTube from "react-youtube";
 
 
@@ -52,6 +52,17 @@ export default class CardReport extends Component {
         return (
             <Col sm="12" md="6">
                 <Card className="contrib-card-report">
+                    <h1>
+                        {
+                            this.props.goodPractice?
+                                <Badge color="success">
+                                    GOOD PRACTICE
+                                </Badge>
+                                :<Badge color="danger">
+                                    PROBLEM
+                                </Badge>
+                        }
+                    </h1>
                     <Progress color={style} value={level}>{priority}</Progress>
                     <h1>{this.props.title}</h1>
                     {this.props.imageUrl ?
