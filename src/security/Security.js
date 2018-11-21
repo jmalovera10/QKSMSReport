@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import CardReport from "../CardReport";
+import ReportHelp from "../ReportHelp";
 
 export default class Security extends Component {
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
+
+                <ReportHelp/>
+
                 <CardReport
                     title="Permission Management"
                     level={2}

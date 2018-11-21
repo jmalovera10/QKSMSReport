@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CardReport from "../CardReport";
 import {Row} from 'reactstrap';
+import ReportHelp from "../ReportHelp";
 
 export default class Performance extends Component {
 
@@ -8,6 +9,7 @@ export default class Performance extends Component {
         return (
             <div className="performance">
                 <Row>
+                    <ReportHelp/>
                     <CardReport title="Application CPU Use By Repainting"
                                 videoId="_rXOZWx-YRE"
                                 analysis={
@@ -53,7 +55,8 @@ export default class Performance extends Component {
                                         </p>
                                         <p>
                                             <strong>Testing scenario:</strong>
-                                            On a Xperia running android 7.0 we re-initialize the app and directly did 10 turns back and forth of the
+                                            On a Xperia running android 7.0 we re-initialize the app and directly did 10
+                                            turns back and forth of the
                                             screen.
                                             The results after the optimizations are in the next image
                                         </p>
@@ -78,7 +81,8 @@ export default class Performance extends Component {
                                             the activity within the chips used in the UI. The memory behavior
                                             app for this experiment is shown in the figure.</p>
                                         <p>
-                                            <strong>Testing scenario: </strong> application in ComposeActivity under rotation
+                                            <strong>Testing scenario: </strong> application in ComposeActivity under
+                                            rotation
                                             stress until 20 rotations.
                                         </p>
                                     </div>
