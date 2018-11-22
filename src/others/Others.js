@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Row} from "react-bootstrap";
 import CardReport from "../CardReport";
-import ReportHelp from "../ReportHelp";
 
 export default class Others extends Component {
     render() {

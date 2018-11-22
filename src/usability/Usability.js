@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import "./Usability.css"
 import CardReport from "../CardReport";
 import {Row} from 'reactstrap';
-import ReportHelp from "../ReportHelp";
 
 // App component - represents the whole app
 

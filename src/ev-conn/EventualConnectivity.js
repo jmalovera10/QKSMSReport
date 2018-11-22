@@ -3,7 +3,6 @@ import "./EventualConnectivity.css"
 import CardReport from "../CardReport";
 import {Col, Row} from 'reactstrap';
 import CardScenario from "../CardScenario";
-import ReportHelp from "../ReportHelp";
 
 export default class EventualConnectivity extends Component {
 

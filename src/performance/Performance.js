@@ -9,7 +9,7 @@ export default class Performance extends Component {
             <div className="performance">
                 <Row>
 
-                    <CardReport title="Application CPU Use By Repainting"
+                    <CardReport title="Application CPU Use By Overdrawing"
                                 videoId="_rXOZWx-YRE"
                                 analysis={
                                     <div>
@@ -29,7 +29,31 @@ export default class Performance extends Component {
                                 }
                                 level={2}
                                 recommendation="Avoid repainting in ComposeActivity by removing all unnecessary backgrounds."
+                                fixImageUrl="/screenshots/RepaintFix.PNG"
                     />
+
+                    <CardReport title="MainACtivity CPU Profiling"
+                                imageUrl="/screenshots/CPUPerformanceMainActivity.png"
+                                imageUrl2="/screenshots/CPUPerformanceMainActivityAfterFix.png"
+                                analysis={
+                                    <div>
+                                        <p>Bearing in mind the overall memory consumption of the application that in normal
+                                            conditions keeps stable through time, we tried to analyze the behaviour of CPU
+                                        during stress conditions. When rotating the phone repetitively with the fix, we found
+                                        a decrease of CPU consumption on the onCreate() period and an average CPU consumption
+                                        decrease for the whole test.</p>
+                                        <p>
+                                            <strong>Testing scenario:</strong> the phone was under rotation stress. The number
+                                            of rotations is 20 and is applied on the application before and after background
+                                            elimination fix.
+                                        </p>
+                                    </div>
+                                }
+                                level={2}
+                                recommendation="Avoid repainting in ComposeActivity by removing all unnecessary backgrounds."
+                                fixImageUrl="/screenshots/RepaintFix.PNG"
+                    />
+
                     <CardReport title="MainActivity Memory Profiling"
                                 imageUrl="/screenshots/memoryPerformance10TurnsbackAndForth.PNG"
 
