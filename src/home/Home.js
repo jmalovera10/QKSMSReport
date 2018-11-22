@@ -112,6 +112,17 @@ export default class Home extends Component {
                     }
                     imagePath={""}
                 />
+                <FactModule
+                    big={false}
+                    value={
+                        <div>
+                            <i className="fas fa-sitemap fa-5x"></i>
+                            <h5>Architecture</h5>
+                            <h5>MVVM/MVI</h5>
+                        </div>
+                    }
+                    imagePath={""}
+                />
                 <Col sm="12" md="12">
                     <Card body={true} className="contrib-card">
                         <h1>Contributor Statistics</h1>

@@ -7,7 +7,7 @@ export default class FactModule extends Component {
 
     render() {
         return (
-            <Col sm={this.props.big ? "6" : "3"} md={this.props.big ? "2" : "2"}>
+            <Col sm={this.props.big ? "6" : "4"} md={this.props.big ? "2" : "3"}>
                 <Card className="center-items fact-card">
                     <Image className="image"  src={this.props.imagePath} rounded={true} responsive={true}/>
                     {this.props.value}

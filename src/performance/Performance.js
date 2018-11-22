@@ -59,12 +59,13 @@ export default class Performance extends Component {
                                 fixImageUrl="/screenshots/RepaintFix.PNG"
                     />
 
-                    <CardReport title="MainACtivity CPU Profiling"
+                    <CardReport title="MainActivity CPU Profiling"
                                 imageUrl="/screenshots/CPUPerformanceMainActivity.png"
                                 imageUrl2="/screenshots/CPUPerformanceMainActivityAfterFix.png"
                                 analysis={
                                     <div>
-                                        <p>Bearing in mind the overall memory consumption of the application that in
+                                        <p>
+                                            Bearing in mind the overall memory consumption of the application that in
                                             normal
                                             conditions keeps stable through time, we tried to analyze the behaviour of
                                             CPU
@@ -72,13 +73,43 @@ export default class Performance extends Component {
                                             we found
                                             a decrease of CPU consumption on the onCreate() period and an average CPU
                                             consumption
-                                            decrease for the whole test.</p>
+                                            decrease for the whole test. The fix done was the deletion of redundant
+                                            backgrounds used in the MainActivity that were detected by the lint.
+                                        </p>
                                         <p>
                                             <strong>Testing scenario:</strong> the phone was under rotation stress. The
                                             number
                                             of rotations is 20 and is applied on the application before and after
                                             background
                                             elimination fix.
+                                        </p>
+                                    </div>
+                                }
+                                level={2}
+                                recommendation="Avoid repainting in ComposeActivity by removing all unnecessary backgrounds."
+                                fixImageUrl="/screenshots/RepaintFix.PNG"
+                    />
+
+                    <CardReport title="ComposeActivity CPU Profiling"
+                                imageUrl="/screenshots/CPUPerformanceComposeActivity.png"
+                                imageUrl2="/screenshots/CPUPerformanceComposeActivityAfterFix.png"
+                                analysis={
+                                    <div>
+                                        <p>
+                                            Bearing in mind the overall memory consumption of the application that in
+                                            normal
+                                            conditions keeps stable through time, we tried to analyze the behaviour of
+                                            CPU
+                                            during stress conditions. When rotating the phone repetitively with the fix,
+                                            we found a decrease of CPU consumption on the onCreate() period and an
+                                            average CPU consumption decrease for the whole test. The fix done was the
+                                            deletion of redundant backgrounds used in the ComposeActivity that were
+                                            detected by the lint.
+                                        </p>
+                                        <p>
+                                            <strong>Testing scenario:</strong> the phone was under rotation stress. The
+                                            number of rotations is 20 and is applied on the application before and after
+                                            background elimination fix.
                                         </p>
                                     </div>
                                 }
@@ -111,7 +142,7 @@ export default class Performance extends Component {
                                         </p>
                                         <p>
                                             <strong>Testing scenario:</strong>
-                                            On a Xperia running android 7.0 we re-initialize the app and directly did 10
+                                            On a Xperia running android 7.0 we re-initialize the app and directly did 20
                                             turns back and forth of the
                                             screen.
                                             The results after the optimizations are in the next image
@@ -119,8 +150,10 @@ export default class Performance extends Component {
                                     </div>}
                                 imageUrl2="/screenshots/memoryPerformance10TurnsbackAndForthWithImprovements.PNG"
                                 recommendation="Changing strong relationships for weak relationships. On the OnDestroy set references to null.
-                                We did some changes (look at repository) and made some improvement (of 15 MB so about 10%).
-                                But the problem is still there, it seems some lazy initializations don't allow weak referencing."
+                                We did some changes (look at repository) and made some improvement (of 20 MB so about 10%).
+                                But the problem is still there, it seems some lazy initializations don't allow weak referencing.
+                                Another solution to the problem may be the use of Mosby
+                                for the MVI pattern to auto-manage rotation events and prevent memory leaks."
                                 fixImageUrl="/screenshots/MainActivityRelationFix.PNG"
 
                     />
@@ -137,9 +170,8 @@ export default class Performance extends Component {
                                             the activity within the chips used in the UI. The memory behavior
                                             app for this experiment is shown in the figure.</p>
                                         <p>
-                                            <strong>Testing scenario: </strong> application in ComposeActivity under
-                                            rotation
-                                            stress until 20 rotations.
+                                            <strong>Testing scenario: </strong> On a Xperia running android 7.0 the
+                                            application was used in ComposeActivity under rotation stress until 20 rotations.
                                         </p>
                                     </div>
                                 }
@@ -147,7 +179,8 @@ export default class Performance extends Component {
                                 recommendation="Try using WeakReference for all activity references passed to any helper or
                                 UI component. This attacks the strong reference problem directly. Another way to prevent this
                                 to happen, is by deleting any existing reference on the onDestroy() method. This fix proved to
-                                reduce the memory consumption up to 10MB."
+                                reduce the memory consumption up to 10MB. Another solution to the problem may be the use of Mosby
+                                for the MVI pattern to auto-manage rotation events and prevent memory leaks."
                                 fixImageUrl="/screenshots/ComposeActivityRelationFix.PNG"
                     />
 
@@ -162,7 +195,7 @@ export default class Performance extends Component {
                                 reused efficiently as it can be observed in the figure.
                                 Even though memory management is good, it can always be improved.
                                  We noticed that icons are not being recycled, doing this may improve the memory performance even further."
-                                level={1}
+                                level={3}
                                 recommendation="Keep recycling all bitmap icons used in the applications."
                     />
 
