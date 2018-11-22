@@ -68,7 +68,7 @@ export default class CardReport extends Component {
                     {this.props.imageUrl ?
                         <Image className="image" src={this.props.imageUrl} rounded={true} responsive={true}/> :
                         <div></div>}
-                    <p>{this.props.analysis}</p>
+                    {this.props.analysis}
                     {this.props.imageUrl2 ?
                         <Image className="image2" src={this.props.imageUrl2} rounded={true} responsive={true}/> :
                         <div></div>}

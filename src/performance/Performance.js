@@ -42,7 +42,8 @@ export default class Performance extends Component {
                                             video by purple
                                             frames). Nevertheless, in the MainActivity the repaintings only occur due to
                                             UI scrolling
-                                            or user input, which means that it has optimized CPU usage. The overdraw can also
+                                            or user input, which means that it has optimized CPU usage. The overdraw can
+                                            also
                                             appreciated on the video below:
                                         </p>
                                         <YouTube videoId="h87hDnzYsgM" className="video" opts={opts}/>
@@ -63,14 +64,20 @@ export default class Performance extends Component {
                                 imageUrl2="/screenshots/CPUPerformanceMainActivityAfterFix.png"
                                 analysis={
                                     <div>
-                                        <p>Bearing in mind the overall memory consumption of the application that in normal
-                                            conditions keeps stable through time, we tried to analyze the behaviour of CPU
-                                        during stress conditions. When rotating the phone repetitively with the fix, we found
-                                        a decrease of CPU consumption on the onCreate() period and an average CPU consumption
-                                        decrease for the whole test.</p>
+                                        <p>Bearing in mind the overall memory consumption of the application that in
+                                            normal
+                                            conditions keeps stable through time, we tried to analyze the behaviour of
+                                            CPU
+                                            during stress conditions. When rotating the phone repetitively with the fix,
+                                            we found
+                                            a decrease of CPU consumption on the onCreate() period and an average CPU
+                                            consumption
+                                            decrease for the whole test.</p>
                                         <p>
-                                            <strong>Testing scenario:</strong> the phone was under rotation stress. The number
-                                            of rotations is 20 and is applied on the application before and after background
+                                            <strong>Testing scenario:</strong> the phone was under rotation stress. The
+                                            number
+                                            of rotations is 20 and is applied on the application before and after
+                                            background
                                             elimination fix.
                                         </p>
                                     </div>
@@ -158,6 +165,34 @@ export default class Performance extends Component {
                                 level={1}
                                 recommendation="Keep recycling all bitmap icons used in the applications."
                     />
+
+                    <CardReport title="No Unused Imports"
+                                analysis={
+                                    <div>
+                                        <i className="fas fa-file-invoice fa-8x"
+                                           onClick={() => window.open("/lintResults.html", "_blank")}></i>
+                                        <h2 >Complete lint report <a href="/lintResults.html" target="_blank">here</a></h2>
+                                        <p>When using the Android lint tool to search for unused imports, we found that
+                                            there
+                                            were not any declared import that was not used, which means that it is
+                                            already optimized
+                                            in that aspect. Nevertheless, when looking at the lint report there are
+                                            several other issues
+                                            that are not necessarily related to performance. We advise checking the
+                                            whole report for more
+                                            app insights.
+                                        </p>
+                                        <p>
+                                            <strong>Testing scenario: </strong> application static analysis using lint
+                                            tool.
+                                        </p>
+                                    </div>
+                                }
+                                level={1}
+                                goodPractice={true}
+                                recommendation="Keep libraries optimized to avoid further performance problems"
+                    />
+
                     <CardReport title="Micro-Optimizations"
                                 imageUrl="/screenshots/microOptsErrors.PNG"
                                 imageUrl2="/screenshots/microOptsErrors2.PNG"
