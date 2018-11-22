@@ -1,10 +1,33 @@
 import React, {Component} from 'react';
 import CardReport from "../CardReport";
+import YouTube from "react-youtube";
 import {Row} from 'reactstrap';
 
 export default class Performance extends Component {
 
     render() {
+
+        let opts = {};
+        console.log(window.innerWidth);
+        if (window.innerWidth > 600) {
+            opts = {
+                height: '390',
+                width: '500',
+                playerVars: { // https://developers.google.com/youtube/player_parameters
+                    autoplay: 0
+                }
+            };
+        }
+        else if (window.innerWidth > 50) {
+            opts = {
+                height: '390',
+                width: window.innerWidth - 50,
+                playerVars: { // https://developers.google.com/youtube/player_parameters
+                    autoplay: 0
+                }
+            };
+        }
+
         return (
             <div className="performance">
                 <Row>
@@ -19,7 +42,10 @@ export default class Performance extends Component {
                                             video by purple
                                             frames). Nevertheless, in the MainActivity the repaintings only occur due to
                                             UI scrolling
-                                            or user input, which means that it has optimized CPU usage.</p>
+                                            or user input, which means that it has optimized CPU usage. The overdraw can also
+                                            appreciated on the video below:
+                                        </p>
+                                        <YouTube videoId="h87hDnzYsgM" className="video" opts={opts}/>
                                         <p>
                                             <strong>Testing scenario:</strong> the application was navigated on normal
                                             conditions,
