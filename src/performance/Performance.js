@@ -91,8 +91,8 @@ export default class Performance extends Component {
                     />
 
                     <CardReport title="ComposeActivity CPU Profiling"
-                                imageUrl="/screenshots/CPUPerformanceComposeActivity.png"
-                                imageUrl2="/screenshots/CPUPerformanceComposeActivityAfterFix.png"
+                                imageUrl="/screenshots/CPUPerformanceComposeActivity.PNG"
+                                imageUrl2="/screenshots/CPUPerformanceComposeActivityAfterFix.PNG"
                                 analysis={
                                     <div>
                                         <p>
