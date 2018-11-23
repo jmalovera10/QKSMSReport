@@ -10,17 +10,24 @@ export default class EventualConnectivity extends Component {
         return (
             <div className="ev-conn">
                 <Row>
-                    <CardReport title="Eventual connectivity is for the most part well handled."
+                    <CardReport title="Eventual connectivity is halfway handled."
                                 imageUrl="/screenshots/notificationEC.PNG"
-                                analysis="Eventual connectivity is actually well handled. When everything needed is enabled, messages that cannot be sent are kept as “sending” and messages that failed in the sending process generate a notification that is shown to the user and prompts him to retry.
-When messages are scheduled and there is no network when the message is supposed to be sent, the same notification is launched.
-The only missing thing is that the app does not alert the user that any of these fails are because of a network error.
-As it is done when trying to make a call, that the app realises that airplane mode is on and prompts to turn it off.
-"
+                                analysis="Eventual connectivity is kind of well handled for sms.
+                                When there is no network access sms fail in the sending process generating a notification that is shown to the user and prompts him to retry.
+                                When messages are scheduled and there is no network when the message is supposed to be sent, the same notification is launched.
+                                The app does not alert the user that any of these fails are because of a network error.
+                                As it is done when trying to make a call, that the app realises that airplane mode is on and prompts to turn it off.
+                                Furthermore, eventual connectivity is not being handled for mms files.
+                                Sending messages is done through a RX subscription,
+                                it seems like a new stream is launch when a message needs to be sent and it keeps running until it is sent, with no possibility of being deleted or handling errors.
+
+"                               imageUrl2="/screenshots/retrySending.PNG"
                                 recommendation="Changing the message shown to the user prompting him to check his connection.
                                  Try not to recreate the whole activity when clicking the notification.
-                                 Maybe you could even check for airplane mode when trying to send a message and prompt the user to disable it."
-                                level={1}
+                                 Maybe you could even check for airplane mode when trying to send a message and prompt the user to disable it.
+                                 Use queues for scheduling messages that were not sent.
+                                 Implement eventual connectivity for mms."
+                                level={2}
                                 fixImageUrl="/screenshots/notificationImprovement.PNG"
                     />
                     <Col md="6">
@@ -63,6 +70,12 @@ As it is done when trying to make a call, that the app realises that airplane mo
                             scenario="Tested making a call with airplane mode on."
                             results="I was immediately prompted with a message to deactivate airplane mode."
                             imageResults="/screenshots/airplaneModeCall.jpeg"
+                        />
+                        <CardScenario
+                            scenario="Sent 4 mms files on airplane mode. Deleted the third. Turn airplane mode off."
+                            results="Only the last message past from 'sending...' to sent. But all 4 messages reached the recipient.
+                            We realized eventual connectivity is not being correctly handled for mms."
+                            imageResults="/screenshots/mmsError.jpeg"
                         />
                     </Col>
 

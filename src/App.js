@@ -10,6 +10,7 @@ import Others from "./others/Others";
 
 import './App.css';
 import Usability from "./usability/Usability";
+import Threading from "./threading/Threading";
 
 class App extends Component {
 
@@ -27,6 +28,11 @@ class App extends Component {
         this.goToSecurity = this.goToSecurity.bind(this);
         this.goToUsability = this.goToUsability.bind(this);
         this.goToOther = this.goToOther.bind(this);
+        this.goToThreading = this.goToThreading.bind(this);
+    }
+
+    goToThreading(){
+        this.setState({position:"threading"});
     }
 
     goToHome() {
@@ -63,6 +69,7 @@ class App extends Component {
                 <DashboardNavbar goToHome={this.goToHome} goToEvConn={this.goToEvConn} goToStorage={this.goToStorage}
                                  goToPerformance={this.goToPerformance} goToSecurity={this.goToSecurity}
                                  goToUsability={this.goToUsability} goToOther={this.goToOther}
+                                 goToThreading={this.goToThreading}
                 />
                 {
                     this.state.position === "home" ?
@@ -79,6 +86,8 @@ class App extends Component {
                                         <Usability/>
                                         : this.state.position === "other" ?
                                             <Others/>
+                                            : this.state.position === "threading" ?
+                                            <Threading/>
                                             : null
                 }
             </div>

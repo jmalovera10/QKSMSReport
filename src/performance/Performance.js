@@ -239,9 +239,6 @@ export default class Performance extends Component {
                                 See pull-request for all the places we found this errors."
                     />
                     <CardReport title="Greatly modularize code"
-                                imageUrl="/screenshots/"
-                                imageUrl2="/screenshots/"
-                                fixImageUrl="/screenshots/"
                                 analysis="We find that the code is too modularized. For a two to three activities application it seems highly unnecessary the number of classes used.
                                 This adds a performance overhead in terms of memory because of the amount of code and of instances created and in terms of performance because it makes it longer to create each element.
                                 This might be the primary responsible for the really poor performance of what seems like a simple application.

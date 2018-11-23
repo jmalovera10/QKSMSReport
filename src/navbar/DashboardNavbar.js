@@ -50,7 +50,13 @@ export default class DashboardNavbar extends Component {
                             Security
                         </div>
                     </NavItem>
-                    <NavItem eventKey={4} onClick={this.props.goToOther}>
+                    <NavItem eventKey={4} onClick={this.props.goToThreading}>
+                        <Glyphicon glyph="random" bsClass="glyphicon"/>
+                        <div>
+                            Threading
+                        </div>
+                    </NavItem>
+                    <NavItem eventKey={5} onClick={this.props.goToOther}>
                         <Glyphicon glyph="plus-sign" bsClass="glyphicon"/>
                         <div>
                             Others
