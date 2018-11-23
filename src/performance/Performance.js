@@ -238,14 +238,7 @@ export default class Performance extends Component {
                                 Avoid using findById as it is energy greedy, at this point the code is made so that this usage is mandatory but repetitive it could be useful to change it.
                                 See pull-request for all the places we found this errors."
                     />
-                    <CardReport title="Greatly modularize code"
-                                analysis="We find that the code is too modularized. For a two to three activities application it seems highly unnecessary the number of classes used.
-                                This adds a performance overhead in terms of memory because of the amount of code and of instances created and in terms of performance because it makes it longer to create each element.
-                                This might be the primary responsible for the really poor performance of what seems like a simple application.
-                                Furthermore, this is usually a maintainability tactic but when taken to this extent it only seems to make it harder to maintain or modify code especially since it is not well documented."
-                                level={2}
-                                recommendation="Reduce modularity as much as possible. Document code."
-                    />
+
                 </Row>
             </div>
         );
