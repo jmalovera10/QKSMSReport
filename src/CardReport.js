@@ -1,9 +1,9 @@
-import "./CardReport.css"
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
 import {Image} from "react-bootstrap";
 import {Card, Col, Progress} from 'reactstrap';
 import YouTube from "react-youtube";
-
+import "./CardReport.css"
 
 // App component - represents the whole app
 
@@ -93,3 +93,14 @@ export default class CardReport extends Component {
     }
 
 }
+
+CardReport.propTypes = {
+    level: PropTypes.number,
+    goodPractice: PropTypes.bool,
+    title: PropTypes.string,
+    imageUrl: PropTypes.string,
+    analysis: PropTypes.object,
+    imageUrl2: PropTypes.string,
+    recommendation: PropTypes.string,
+    fixImageUrl: PropTypes.string
+};

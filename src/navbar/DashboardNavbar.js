@@ -32,6 +32,12 @@ export default class DashboardNavbar extends Component {
                             Ev. Connectivity
                         </div>
                     </NavItem>
+                    <NavItem eventKey={1} onClick={this.props.goToStorage}>
+                        <Glyphicon glyph="hdd" bsClass="glyphicon"/>
+                        <div>
+                            Storage
+                        </div>
+                    </NavItem>
                     <NavItem eventKey={2} onClick={this.props.goToPerformance}>
                         <Glyphicon glyph="dashboard" bsClass="glyphicon"/>
                         <div>
@@ -59,6 +65,7 @@ export default class DashboardNavbar extends Component {
 DashboardNavbar.propTypes = {
     goToHome: PropTypes.func.isRequired,
     goToEvConn: PropTypes.func.isRequired,
+    goToStorage: PropTypes.func.isRequired,
     goToPerformance: PropTypes.func.isRequired,
     goToSecurity: PropTypes.func.isRequired,
     goToOther : PropTypes.func.isRequired
