@@ -29,16 +29,20 @@ export default class Security extends Component {
                                 </li>
                                 <li>
                                     <p>
-                                        <strong>Connection Permissions: </strong>even though BILLING and INTERNET permissions
-                                        are not part of the main functionality of the application, these are used for the
+                                        <strong>Connection Permissions: </strong>even though BILLING and INTERNET
+                                        permissions
+                                        are not part of the main functionality of the application, these are used for
+                                        the
                                         user to make donations to the project via internet. This shows that the use of
-                                        these permissions are aligned with side features that are not harmful for the user.
+                                        these permissions are aligned with side features that are not harmful for the
+                                        user.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
                                         <strong>Manufacturer Permissions: </strong>the permissions in this set are
-                                        related to manufacturer features, more specifically the use of device notifications.
+                                        related to manufacturer features, more specifically the use of device
+                                        notifications.
                                         The badge, read and write permissions permit the use of the notification bar and
                                         features of different type of phones by the application.
                                     </p>
@@ -79,7 +83,11 @@ export default class Security extends Component {
                     and receivers, respectively."
                     imageUrl={"/screenshots/ActivityInfo.png"}
                 />
-                <h3><a href="/detailedSecurityReport.pdf" target="_blank">Detailed report link</a></h3>
+                <i className="fas fa-file-invoice fa-8x"
+                   onClick={() => window.open("/detailedSecurityReport.pdf", "_blank")}></i>
+                <h3>
+                    To see the detailed report, click <a href="/detailedSecurityReport.pdf" target="_blank">here</a>
+                </h3>
             </div>
         );
     }
